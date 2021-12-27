@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="onLoad()">
+    <div id="popup">
+        <div class="popupBackground"></div>
+        <div class="popup">
+            <div class="addProduct" style="margin-top: 0;text-align: center;" id="form">
+                <form name="editProduct" method="post">
+                    <h4>Edytuj produkt</h4>
+                    <p>Wprowadzając cenę w postaci ułamka dziesiętnego użyj kropki '.'</p>
+                    <p style="margin-bottom: 15px;">Cena zostanie zaokrąglona do dwóch miejsc po przecinku</p>
+                    <div style="width: 90%; margin-left: auto;margin-right: auto;">
+                        <div class="input">
+                            <label>Nazwa</label>
+                            <input type="text" id="editName" required>
+                        </div>
+                        <div class="input">
+                            <label>Cena</label>
+                            <input min="0" id="editPrice" required
+                                onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;">
+                        </div>
+                        <div class="input">
+                            <label>Ilość</label>
+                            <input min="0" type="number" id="editCount" required>
+                        </div>
+                        <div class="buttonContainer">
+                            <div class="button" onclick="abortPopup()">Cofnij</div>
+                            <button class="button" type="submit">Edytuj produkt</button>
+                            <div class="button" id="delete">Usuń produkt</div>
+                        </div>
+                    </div>
+                </form>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="mainContainer" id="mainContainer">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div>
+                <div class="receiptTittle" style="margin-left: auto;margin-right: auto;">
+                    <h2 id="tittle"></h2>
+                </div>
+                <div style="display: flex;flex-direction: column;align-items: center;">
+                    <table id="list" style="margin-left: auto;margin-right: auto;">
+                        <tr>
+                            <th>LP</th>
+                            <th>Nazwa</th>
+                            <th>Cena</th>
+                            <th>Ilość</th>
+                            <th>Suma</th>
+                        </tr>
+                    </table>
+                    <div style="display: flex; justify-content: space-between; width: 90%;" id="summary">
+                        <p>SUMA</p>
+                        <p id="enterSummary"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="addProduct" id="form">
+                <form name="addProduct" method="post">
+                    <h4>Dodaj produkt</h4>
+                    <p>Wprowadzając cenę w postaci ułamka dziesiętnego użyj kropki '.'</p>
+                    <p style="margin-bottom: 15px;">Cena zostanie zaokrąglona do dwóch miejsc po przecinku</p>
+                    <div style="width: 60%; margin-left: auto;margin-right: auto;">
+                        <div class="input">
+                            <label>Nazwa</label>
+                            <input type="text" id="addName" required>
+                        </div>
+                        <div class="input">
+                            <label>Cena</label>
+                            <input min="0" id="addPrice" required
+                                onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;">
+                        </div>
+                        <div class="input">
+                            <label>Ilość</label>
+                            <input min="0" type="number" id="addCount" required>
+                        </div>
+                    </div>
+                    <button class="button" type="submit">Dodaj produkt</button>
+                </form>
+            </div>
+            <ul style="text-align: left;">Żeby usunąć lub edytować produkt, kliknij na wiersz w którym się znajduje a następnie kliknij:
+                <li>'Usuń produkt' w celu jego usunięcia</li>
+                <li>'Edytuj produkt' w celu jego edycji</li>
+                <li>'Cofnij', jeśli zdecydujesz się nie robić nic</li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

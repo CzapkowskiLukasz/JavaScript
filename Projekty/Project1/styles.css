@@ -1,0 +1,114 @@
+.mainContainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.receiptTittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px 5pxx 15px;
+    border: 1px solid gray;
+    border-width: 2px 0 2px 0;
+    width: 90%;
+    white-space: nowrap;
+}
+
+h2 {
+    margin: 5px 60px 5px 60px;
+}
+
+table {
+    width: 90%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.element {
+    border-bottom: 1px solid gray;
+}
+
+.addProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border: 2px solid gray;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+th {
+    border-bottom: 1px solid gray;
+}
+
+h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+input:valid {
+    margin-bottom: 5px;
+    border: 2px solid gray;
+}
+
+.button {
+    border: 2px solid gray;
+    background-color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input:required{
+    margin-bottom: 5px;
+    border: 2px solid gray;
+}
+
+input:focus{
+    outline: none;
+    margin-bottom: 5px;
+    border: 2px solid gray;
+}
+
+form p{
+    margin: 0;
+    font-size: smaller;
+}
+
+
+.popupBackground{
+    background-color: gray;
+    left: 0;
+    top: 0;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 69;
+}
+
+.popup{
+    width: 385px;
+    height: 214px;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    margin-left: -192.2px;
+    margin-top: -214px;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    margin-left: 40px;
+}
