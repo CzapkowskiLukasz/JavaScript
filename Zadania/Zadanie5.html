@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="bodyDiv">
+        <p id="0" >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p id="1">Nullam faucibus tellus non velit rutrum, quis elementum quam
+            tincidunt.</p>
+        <p id="2">Donec vitae urna ut magna gravida ornare.</p>
+        <p id="3">Nam id elit at libero convallis egestas sed sed ipsum.</p>
+        <p id="4">Fusce a diam non libero laoreet tincidunt.</p>
+        <p id="5">Nullam cursus mauris eget felis gravida posuere.</p>
+        <p id="6">Aenean vitae quam magna.</p>
+        <p id="7">Nulla fringilla laoreet augue, id congue magna aliquam quis.
+            Ut lobortis sit amet sapien eget malesuada.</p>
+        <div id="divForm">
+            <form name="form" method="post">
+                <input type="text" name="input">
+                <button type="submit">Submit form</button>
+            </form>
+        </div>
+        <div style="margin-top: 10px">
+            <button onclick="clearAllParagraphs()">Clear paragraphs</button>
+        </div>
+        <script>
+            //ZADANIE 1
+            var ar = document.getElementsByTagName('p')
+            function colorParagraphs() {
+                var colors = ['red', 'black', 'green', 'blue', 'orange', 'grey', 'purple', 'yellow', 'blueviolet', 'brown']
+                for (var i = 0; i < ar.length; ++i) {
+                    var colorNumber = Math.floor(Math.random() * 10);
+                    ar[i].style.color = colors[colorNumber]
+                }
+            }
+            colorParagraphs()
+
+            //ZADANIE 2
+            function setTitle() {
+                var ar = document.getElementsByTagName('p')
+                for (var i = 0; i < ar.length; i++)
+                    ar[i].title = ar[i].innerText.length
+            }
+
+            setTitle()
+
+            //ZADANIE 3
+
+            const buttons = document.getElementById("bodyDiv")
+
+            buttons.onclick = (event) => {
+                if (event.target.nodeName == "P") {
+                    onClick(event.target, event.target.id)
+                }
+            }
+
+            function onClick(element, id) {
+                var element = document.getElementById(id)
+                clearAllParagraphs()
+
+                var element1 = ar[id]
+                colorBorder(element1, 'green')
+                if (id > 0 && id < ar.length - 1) {
+                    var element2 = ar[id - 1]
+                    var element3 = ar[parseInt(id, 10) + 1]
+                    colorBorder(element2, 'orange')
+                    colorBorder(element3, 'blue')
+                }
+                else {
+                    if (id == 0) {
+                        var element2 = ar[id + 1]
+                        colorBorder(element2, 'blue')
+                    }
+                    if (id == ar.length - 1) {
+                        var element2 = ar[id - 1]
+                        colorBorder(element2, 'orange')
+                    }
+                }
+
+                if (id % 2 == 0) {
+                    colorBackground(element1, 'lightgray')
+                    colorBackground(element2, 'gray')
+                    colorBackground(element3, 'gray')
+                }
+                else {
+                    colorBackground(element1, 'gray')
+                    colorBackground(element2, 'lightgray')
+                    colorBackground(element3, 'lightgray')
+                }
+            }
+
+            function colorBorder(element, color) {
+                element.style.borderStyle = 'solid'
+                element.style.borderColor = color
+            }
+
+            function colorBackground(element, color) {
+                element.style.backgroundColor = color
+            }
+
+            function clearAllParagraphs() {
+                for (var i = 0; i < ar.length; ++i) {
+                    clearParagraphBorders(ar[i])
+                }
+            }
+
+            function clearParagraphBorders(element) {
+                element.style.borderStyle = 'none'
+                element.style.backgroundColor = 'white'
+            }
+
+            //ZADANIE 4
+            for (var i = 0; i < ar.length; ++i) {
+                createParagraphHeadliner(i)
+            }
+
+            function createParagraphHeadliner(i) {
+                var header = document.createElement("H6")
+                header.innerHTML = "Paragraf " + i.toString()
+                var out = document.getElementById(i)
+                out.before(header)
+            }
+
+            //ZADANIE 5
+            var ar2 = document.getElementsByTagName('H6')
+            for (var i = 0; i < ar2.length; i++) {
+                setAtributesToHeadliner(i)
+            }
+
+            function hideOnClick(id) {
+                var element = ar[id]
+                if (element.style.visibility == 'visible')
+                    element.style.visibility = 'hidden'
+                else {
+                    element.style.visibility = 'visible'
+                }
+            }
+
+            function setAtributesToHeadliner(i) {
+                ar2[i].setAttribute('id', i.toString())
+                ar2[i].setAttribute('onclick', 'hideOnClick(' + i.toString() + ')')
+                ar[i].style.visibility = 'visible'
+            }
+
+            //ZADANIE 6
+            document.forms.form.onsubmit = function (event) {
+                var index = ar.length
+                var paragraph = document.createElement("P")
+                var text = event.target.input.value
+                var out = document.getElementById("divForm")
+                setAtributesToParagraph(paragraph, index, text)
+                out.before(paragraph)
+                event.preventDefault()
+                createParagraphHeadliner(index)
+                setAtributesToHeadliner(index)
+                colorParagraphs()
+                setTitle()
+            }
+            function setAtributesToParagraph(paragraph, index, text) {
+                paragraph.innerHTML = text
+                paragraph.setAttribute('id', index.toString())
+                paragraph.setAttribute('onclick', 'onClick(' + index.toString() + ')')
+                paragraph.setAttribute('onmouseoverk', 'onHover(' + index.toString() + ')')
+            }
+        </script>
+    </div>
+</body>
+
+</html>
