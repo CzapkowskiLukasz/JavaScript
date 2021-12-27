@@ -1,0 +1,272 @@
+{
+	"textures": [
+		{
+			"image": "npc1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 29,
+				"h": 400
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "npc-move-down-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "npc-move-left-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 35,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "npc-move-right-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 69,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "npc-move-up-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 27,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 103,
+						"w": 27,
+						"h": 32
+					}
+				},
+				{
+					"filename": "npc-move-left-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 137,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-left-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 170,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-right-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 203,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-right-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 27,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 236,
+						"w": 27,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-down-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 26,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 269,
+						"w": 26,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-down-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 26,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 302,
+						"w": 26,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-up-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 1,
+						"w": 26,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 335,
+						"w": 26,
+						"h": 31
+					}
+				},
+				{
+					"filename": "npc-move-up-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 1,
+						"w": 26,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 368,
+						"w": 26,
+						"h": 31
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b415a0d5c1d4295a43fe45ab4e9e5965:85b355507acab7a506a5fae3ff294226:64d956f7bbde8fc6034d853bb7803f9b$"
+	}
+}

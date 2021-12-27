@@ -1,0 +1,170 @@
+{
+	"textures": [
+		{
+			"image": "chest.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 18,
+				"h": 102
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "chest-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 10,
+						"w": 16,
+						"h": 22
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 16,
+						"h": 22
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "chest-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 1,
+						"y": 25,
+						"w": 16,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "chest-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 16,
+						"h": 21
+					},
+					"frame": {
+						"x": 1,
+						"y": 25,
+						"w": 16,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "chest-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 14,
+						"w": 16,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 48,
+						"w": 16,
+						"h": 18
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "chest-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 16,
+						"h": 16
+					},
+					"frame": {
+						"x": 1,
+						"y": 68,
+						"w": 16,
+						"h": 16
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "chest-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 17,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 1,
+						"y": 86,
+						"w": 16,
+						"h": 15
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:7f21335e071f724d4809ff3109bd2aba:18eae874e94951cac184e3c65007d6a3:d0951faa14b608797f96616a345e52d5$"
+	}
+}
