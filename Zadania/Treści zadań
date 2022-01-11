@@ -1,0 +1,92 @@
+Zadanie 2
+
+1. Wypisz do konsoli wartości od 1 do 100, zastępując każdą wartość parzystą słowem "Fiz",
+  a każdą podzielną przez trzy słowem "Buz" (lub słowem "FizBuz" jeśli jest podzielna zarówno przez 2 jak i przez 3). 
+  Wartości wypisz w pojedynczym wierszu - pojedynczą instrukcją console.log (np. budując string).
+2. Wczytaj od użytkownika (wykorzystując funkcję prompt()) długość promienia koła. Oblicz jego obwód i pole powierzchni.
+  Wypisz je do konsoli, zaokrąglając wartość do dwóch miejsc po przecinku.
+3. Do każdego z poniższych podpunktów napisz osobną funkcję. Działanie zademonstruj wywołując je po kolei i wypisując zawartość tablicy po każdej operacji:
+ - Stwórz i wypełniaj tablicę losowymi wartościami z przedziału 1-10, do momentu gdy ich suma nie osiągnie 200.
+ - Znajdź wartość najmniejszą i usuń jej pierwsze wystąpienie.
+ - Znajdź wartość największą i usuń jej ostatnie wystąpienie.
+ - Wypisz do konsoli informację ile razy każda z wartości występuje w tablicy.
+ - Dziesięć pierwszych wartości (o indeksach 0-9) przenieś na koniec (nie zmieniając ich kolejności).
+4. Zadeklaruj tablicę wypełnioną pięcioma imionami (napisami). Następnie każde imię "zakoduj" zmieniając każdą literę "a" lub "A" na "4",
+  a każdą "e" lub "E" na "3". Następnie z każdego imienia dłuższego niż 6 znaków wytnij środek, aby zostawić trzy pierwsze i trzy ostatnie litery,
+  a na jego miejsce wstaw trzy kropki "...". Np. imię "Kazimierz" zmieni się w "K4z...3rz". Efekt wypisz do konsoli.
+5. Dany jest string zawierający nazwy towarów oddzielane przecinkami (np. "jajka, mleko, masło, chleb").
+  Na tej podstawie stwórz cennik - tablicę obiektów. Każdy obiekt w tej tablicy zawiera dwa pola - nazwę (wydobytą ze stringu) oraz 
+  cenę (losową wartość rzeczywistą z dokładnością do dwóch miejsc po przecinku). Wyświetl ją w konsoli. Następnie stwórz tablicę zakupów.
+  Przenieś do niej wybrane losowo towary (nie więcej niż połowę), do każdego z nich dopisując ilość (losową). W konsoli wyświetl tablicę zakupów oraz całkowitą cenę.
+  
+  
+  
+  Zadanie 3
+  
+  Wykonaj następujące zadania:
+1. Napisz funkcję, która łączy dwie tablice przy pomocy wskazanej operacji - jako pierwszy parametr przyjmuje pewną funkcję dwuparametrową i 
+  wypełnia tablicę wyjściową wynikiem wykonania tej funkcje na kolejnych elementach obu tablic.
+  Np. jeśli przekazano funkcję obliczającą sumę dwóch liczb oraz tablice [4, 5, 6] i [10, 20, 30], zostanie zwrócone [14, 25, 36].
+  Wypróbuj użycie tej funkcji do stworzenia tablicy punktów z dwóch tablic wypełnionych odpowiednio współrzędnymi x oraz y (czyli np. z tablic [1, 2, 3] oraz [7, 8, 9]
+  zostaną stworzone [{x:1,y:7}, {x:2,y:8}, {x:3,y:9}]).(***) Spróbuj napisać taką wersję tej funkcji, która może przyjąć dowolną liczbę tablic(oraz pewną funkcję 
+  przyjmującą liczbę parametrów równą liczbie tablic) - wówczas np. przekazanie [1,2,3], [5,6,7] i [10,20,30] oraz funkcji dodającej trzy liczby zwróci [16,28,40].
+2. Napisz funkcję, która przyjmuje dwa parametry oznaczające początek i koniec zakresu, a następnie zwraca funkcję bezparametrową, 
+  której kolejne wywołania będą zwracać kolejne całkowite wartości tego zakresu (lub NaN po jego przekroczeniu). Np. dla argumentów 3 i 5 kolejne wywołania 
+  zwróconej funkcji będą zwracać 3, 4, 5, NaN. Funkcja powinna działać również wtedy, gdy pierwszy parametr jest większy od drugiego (przechodząc zakres w drugą 
+  stronę), np. dla argumentów 7 i 3 kolejno będą zwracane wartości 7, 6, 5, 4, 3, NaN.
+
+W poniższych zadaniach nie korzystaj z pętli, a jedynie metod tablic, takich jak forEach, map, filter, reduce.
+
+3. Napisz funkcję, która jako argument przyjmuje napis, następnie zlicza w nim wystąpienia każdego znaku i zwraca jako obiekt-słownik.
+4. Napisz funkcję, która jako parametr przyjmuje tablicę, z której usuwa co drugi element, a następnie skaluje zawartość do przedziału [0,1] (czyli poddaje każdy
+  element takiemu przekształceniu, by najmniejsza wartość stała się zerem, a największa jedynką), po czym wypisuje całość do konsoli, z dokładnością do 
+  dwóch miejsc po przecinku. W zadaniu wykorzystaj metody map i filter.
+5. Stwórz tablicę o zadanym rozmiarze, wypełnij ją losowymi wartościami z przedziału 1-10, a następnie policz (korzystając z metody reduce) ile występuje w
+  niej liczb parzystych i ile wynosi iloczyn wszystkich jej elementów.
+  
+  
+  Zadanie 4
+  
+ W JS stwórz program definiujący Listę towarów wraz z produktami. Produkty powinny być opisane minimum następującymi właściwościami: 
+ (id, nazwa, model, rok produkcji, cena, zużycieEnergii (kWh)). Każdy produkt powinien posiadać następujące metody:
+
+koszt(), która zwraca wartość cenę produktu.
+kosztEnergii(), która zwraca koszt zużycia energii danego produktu przy założonej cenie energii (zmienna w programie) i zużyciu produktu.
+wiekProduktu(), która zwraca jego wiek na podstawie podanego rocznika.
+wiekProduktuLata(), która zwróci odpowiednio 1 rok, 2 lata, 3 lata, 4 lata, 5 lat, 6 lat, itd. w zależności od wieku zwróconego w metodzie wiekProduktu()
+konstruktor
+ListaTowarów zaś powinna zwierać metody:
+
+wypiszProdukt(idProduktu)
+wypiszWszystkieProdukty()
+dodajProdukt(produkt) - rzuca wyjątek jeśli produkt o tym id już jest na liście
+zmieńProdukt(idProduktu, produkt) - znajduje produkt o tym ID i podmienia wszystkie jego składowe wartościami z obiektu produkt
+Dodatkowo zdefiniuj dwa szczegółowe typy ListyTowarów mianowicie Magazyn oraz Sklep, które rozszerzają ListeTowarów.
+
+Magazyn będzie zawierał metodę dodajProdukt(produkt, ilość), która oprócz samego produktu będzie zawierała ilość sztuk, które zostają dane.
+Czyli Magazyn będzie dodatkowo będzie zawierał stan magazynowy danego produktu.
+
+W przypadku Magazynu będzie możliwość zabrania produktu tj. zwrócenia kopii obiektu Produkt oraz zmniejszenia odpowiednio stanu magazynowego.
+
+ 
+
+Sklep zaś będzie zwykłą listą towarów, które można wyświetlić lub dodawać za pomocą metod: 
+
+dodajProdukt(nazwa, model, cena, zużycieEnergii) - id produktu powinno być generowane automatycznie
+dodajProdukt(idProduktu, nazwa, model, cena, zużycieEnergii)
+Na koniec dodaj zamówienie, które będzie umożliwiało dodanie produktów do zamówienia (po ID istniejącego produktu) oraz metodę zrealizujZamowienie, 
+która to usuwa produkt odpowiedniej ilości sztuk z magazynu z którego pochodzi.
+
+
+Zadanie 5
+
+Dokument składa się z pewnej liczby elementów <p>.
+
+1. Tekst każdego z nich pokoloruj na losowy kolor ze zdefiniowanej uprzednio puli (np. "red", "orange", "green", "blue" itd.).
+2. Do każdego paragrafu dodaj atrybut title (podpowiedź pojawiająca się po najechaniu myszą) zawierający liczbę jego znaków.
+3. Po kliknięciu w dowolny paragraf, jest on otaczany zieloną ramką. Paragraf tuż za nim (o ile ten nie był ostatni) otoczony zostaje ramką niebieską, 
+  a ten przed nim - pomarańczową. Jeśli kliknięty element był parzysty, zostaje wyświetlony na jasnoszarym tle, a jeśli nieparzysty - na ciemnoszarym. 
+  Po kliknięciu w jakikolwiek inny element, poprzednie wracają do stanu pierwotnego.
+4. Przed każdym paragrafem dodaj nagłówek o treści "paragraf 1", "paragraf 2" itd.
+5. Kliknięcie w nagłówek ukrywa treść poniższego paragrafu. Ponowne kliknięcie - odłania ją.
+6. Dodaj pole tekstowe pozwalające na dodanie kolejnego paragrafu. Zadbaj, aby wszelkie zachowania z powyższych punktów nadal działały.
